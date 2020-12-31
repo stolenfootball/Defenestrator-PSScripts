@@ -24,3 +24,6 @@ Reg Add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System" /T REG_D
 
 # Turn off Tailored Experience based off diagnostic data
 Reg Add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Privacy" /T REG_DWORD /V "TailoredExperiencesWithDiagnosticDataEnabled" /D 0 /F
+
+# Turn off Meet Now
+Reg Add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /T REG_DWORD /V "HideSCAMeetNow" /D 1 /F
