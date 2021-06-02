@@ -30,7 +30,6 @@ else {                                                                          
 }
 
 
-
 ### ---------------------------------------------- ###
 ### Remove Unnecessary Online Provisioned Packages ###
 ### ---------------------------------------------- ###
@@ -80,7 +79,6 @@ foreach($ProvisionedPackage in $ProvisionedPackages) {                          
 
 }
 
- 
  
 ### -------------------------------- ### 
 ### Remove unnecessary Appx Packages ###
@@ -132,15 +130,6 @@ foreach($Package in $Packages) {                                               #
     }
 
 }
-
-
-
-### --------------------------------------- ###
-### Reset Execution Policy back to Unsigned ###
-### --------------------------------------- ###
-
-Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser      # Reset Execution policy to a value that does not allow scripts to run for security
-
 
 
 ### ----------------------------------- ###
