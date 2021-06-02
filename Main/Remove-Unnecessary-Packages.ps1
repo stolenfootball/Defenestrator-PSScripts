@@ -120,7 +120,8 @@ $ToRemove = "Microsoft.ZuneMusic",                                              
 "Microsoft.Messaging",
 "Microsoft.Print3D",
 "Microsoft.ScreenSketch",
-"Microsoft.RemoteDesktop" 
+"Microsoft.RemoteDesktop",
+"57540AMZNMobileLLC.AmazonAlexa" 
 
 foreach($Package in $Packages) {                                               # Cycle thrrough all Appx packages installed for the user
     foreach($Remove in $ToRemove) {                                            # Cycle through all Appx packages to be removed
