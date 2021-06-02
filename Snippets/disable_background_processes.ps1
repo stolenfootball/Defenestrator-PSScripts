@@ -8,7 +8,7 @@ Reg Add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo"
 # Disable Cortana
 Reg Add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /T REG_DWORD /V "Allow Cortana" /D 1 /F
 
-# Turn off Website Access of LAnguage List
+# Turn off Website Access of Language List
 Reg Add "HKEY_CURRENT_USER\Control Panel\International\User Profile" /T REG_DWORD /V "HttpAcceptLanguageOptOut" /D 1 /F
 
 # Turn of Windows Track app launches
