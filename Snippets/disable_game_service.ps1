@@ -33,9 +33,6 @@ Reg Add "HKLM\SYSTEM\CurrentControlSet\Services\xbgm" /T REG_DWORD /V "Start" /D
 #GameDVR local GP - Computer Config\Admin Templates\Windows Components\Windows Game Recording and Broadcasting
 Reg Add "HKLM\SOFTWARE\Policies\Microsoft\Windows\GameDVR" /T REG_DWORD /V "AllowGameDVR" /D 0 /F
 
-
-### Mine ###
-
 # Game Bar
 Reg Add "HKEY_CURRENT_USER\Software\Microsoft\GameBar" /T REG_DWORD /V "UseNexusForGameBarEnabled" /D 0 /F
 Reg Add "HKEY_CURRENT_USER\Software\Microsoft\GameBar" /T REG_DWORD /V "AutoGameModeEnabled" /D 0 /F
