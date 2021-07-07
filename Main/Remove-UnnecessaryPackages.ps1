@@ -72,7 +72,7 @@ $ProvisionedToRemove = "Microsoft.BingWeather",                                 
 foreach($ProvisionedPackage in $ProvisionedPackages) {                                                              # Cycle thrrough all Provisioned Appx packages installed for the user
     foreach($ProvisionedRemove in $ProvisionedToRemove) {                                                           # Cycle through all Provisioned Appx packages to be removed
         if($ProvisionedPackage.DisplayName -match $ProvisionedRemove) {                                             # Attempt to match each installed provisioned package Display Name to a removal entry
-            Write-Output "Removing " $ProvisionedPackage.DisplayName                                                # Display the package being removed
+            Write-Output "Removing $ProvisionedPackage.DisplayName"                                                 # Display the package being removed
             Remove-ProvisionedAppxPackage -Online -AllUsers -PackageName $ProvisionedPackage.PackageName            # Remove the installed package if it finds a match using the Package Name associated with the Display Name
         }
     }
@@ -125,6 +125,7 @@ $ToRemove = "Microsoft.ZuneMusic",                                              
 foreach($Package in $Packages) {                                               # Cycle thrrough all Appx packages installed for the user
     foreach($Remove in $ToRemove) {                                            # Cycle through all Appx packages to be removed
         if($Package.Name -match $Remove) {                                     # Attempt to match each installed package to a removal entry
+            Write-Output "Removing $Package.Name"                       
             Get-AppxPackage -AllUsers $Package.Name | Remove-AppxPackage       # Remove the installed package if it finds a match
         }
     }
